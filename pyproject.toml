@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pymts"
+version = "0.1.0"
+description = "Synthetic multivariate time series (MTS) generator framework."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { file = "LICENSE" }
+authors = [{ name = "PyMTS Developers" }]
+dependencies = [
+    "numpy",
+    "xarray",
+    "pandas",
+    "pydantic>=2",
+    "typer",
+    "pyyaml",
+    "pyarrow",
+    "matplotlib",
+    "seaborn",
+]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[project.scripts]
+pymts = "cli.app:app"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["pymts", "pymts.*", "cli"]

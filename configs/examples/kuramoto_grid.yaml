@@ -1,0 +1,13 @@
+# Example Kuramoto configuration grid for Step 1 scaffolding.
+model: kuramoto
+M:
+  - 5
+  - 20
+T:
+  - 500
+  - 1000
+K:
+  - 0.5
+  - 1.0
+n_realizations: 3
+seed: 123
