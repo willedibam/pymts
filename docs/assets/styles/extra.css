@@ -1,0 +1,3 @@
+/* Custom tweaks for pymts docs */
+.md-typeset code { font-size: 0.9em; }
+.md-typeset .admonition { border-radius: 6px; }

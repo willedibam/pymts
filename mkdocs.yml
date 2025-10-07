@@ -1,0 +1,114 @@
+site_name: pymts
+site_description: "Synthetic multivariate time-series generators with batteries-included tooling."
+site_url: https://willedibam.github.io/pymts
+repo_name: willedibam/pymts
+repo_url: https://github.com/willedibam/pymts
+edit_uri: edit/main/docs/
+strict: true
+watch:
+  - pymts
+  - docs
+
+theme:
+  name: material
+  language: en
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.instant
+    - navigation.footer
+    - toc.integrate
+    - content.code.copy
+    - content.tabs.link
+    - announce.dismiss
+palette:
+  - scheme: default
+    primary: indigo
+    accent: cyan
+    toggle:
+      icon: material/weather-night
+      name: Switch to dark mode
+  - scheme: slate
+    primary: indigo
+    accent: cyan
+    toggle:
+      icon: material/weather-sunny
+      name: Switch to light mode
+extra:
+  version:
+    provider: mike
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/willedibam/pymts
+    - icon: fontawesome/solid/envelope
+      link: mailto:maintainers@example.com
+extra_css:
+  - assets/styles/extra.css
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          options:
+            docstring_style: numpy
+            show_root_heading: true
+            separate_signature: true
+            heading_level: 2
+            filters:
+              - "!^_"
+  - mkdocs-jupyter:
+      allow_errors: false
+      execute: true
+      include_source: true
+      remove_prompt: true
+  - mike:
+      alias: latest
+      redirect_template: null
+
+nav:
+  - Welcome: index.md
+  - Quickstart: quickstart.md
+  - Tutorials:
+      - Kuramoto, OU & Noise: tutorials/01_kuramoto_and_friends.ipynb
+      - CLI & YAML grids: tutorials/02_cli_and_yaml.ipynb
+  - How-to Guides:
+      - Recipes: how-to/recipes.md
+  - Integrations:
+      - PySPI & hctsa: integrations/pyspi_hctsa.md
+      - scikit-learn: integrations/sklearn.md
+      - statsmodels: integrations/statsmodels.md
+      - tsfresh: integrations/tsfresh.md
+  - Data & Plots:
+      - Real-world Sources: data/real-world.md
+      - Plotting Playbook: plots/plots.md
+  - Reference:
+      - API Reference: reference/api.md
+      - CLI Reference: reference/cli.md
+  - Developer:
+      - Architecture: developer/architecture.md
+      - Adding Models: developer/adding-models.md
+      - Contributing Guide: developer/contributing.md
+      - Shipping & Releases: SHIPPING.md
+  - Meta:
+      - FAQ: faq.md
+      - Troubleshooting: troubleshooting.md
+      - Changelog Policy: changelog.md

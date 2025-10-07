@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+title: pymts
+message: If you use pymts in your research, please cite it as below.
+authors:
+  - family-names: Maintainer
+    given-names: Pat
+    email: maintainers@example.com
+repository-code: https://github.com/willedibam/pymts
+license: MIT
+year: 2025
